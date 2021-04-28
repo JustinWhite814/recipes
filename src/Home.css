@@ -1,0 +1,26 @@
+body {
+ text-align: center;
+}
+.container {
+  margin: 0 auto;
+  padding: 5%;
+  display: grid;
+}
+.row{
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+}
+
+.column {
+flex: 33.33%;
+padding: 5px;
+text-decoration: none;
+}
+
+.title-column {
+  flex: 33.33%;
+  padding: 5px;
+  padding-top: 60px;
+}
+
