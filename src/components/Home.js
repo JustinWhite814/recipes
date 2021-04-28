@@ -10,7 +10,7 @@ const [searchString, setSearchString] = useState('')
 const handleChange =(e) => {
   setSearchString(e.target.value)
 }
-let key = '4a2376c7369f4e6b878089fb4b4391d8'
+let key = process.env.REACT_APP_MEAL_KEY
 const handleSubmit = (e) => {
   e.preventDefault()
   getMeals()
@@ -21,11 +21,9 @@ const getMeals = () =>
     const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchString}&number=12&apiKey=${key}`
     fetch(url)
     .then(res => {
-    console.log(res)
     return res.json()
     })
     .then(data => {
-    console.log(data)  
     setMeals(data)
     // setLastSearch(searchString)
     setSearchString('')

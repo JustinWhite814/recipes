@@ -8,8 +8,7 @@ body {
 }
 .row{
   display: flex;
-  border: 1px solid lightgray;
-  border-radius: 1rem;
+  
 }
 
 .column {
