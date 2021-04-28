@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
+import "../Meals.css"
 
 function Meals({ match }) {
 let key = '4a2376c7369f4e6b878089fb4b4391d8'
@@ -12,17 +13,17 @@ useEffect(()=> {
 }, [])
 console.log(meal)
     return (
-        <div>
-            
-        <div>{meal.title}</div>   
-        <img src={meal.image} alt='' />   
-        <p className='Summary' dangerouslySetInnerHTML={{__html:meal.summary}}></p>
-        {/* <div>{meal.extendedIngredients.map(ingredient=> {
-            return (
-                <div>{ingredient.name}</div>
-            )
-        })}</div> */}
+        <div className='details-container'>  
+         
+        <img style={{width: '40%'}} 
+        src={meal.image} 
+        alt='' 
+        />   
+        <div className='details'>
+        <h2>{meal.title}</h2> 
+        <p dangerouslySetInnerHTML={{__html:meal.summary}}></p>
         
+        </div>
         </div>
     );
 }

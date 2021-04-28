@@ -33,9 +33,8 @@ const getMeals = () =>
 
 return (
   <div>
-  {/* check todoList */}
   
-      <form className="container" onSubmit={handleSubmit}>
+      <form className="" onSubmit={handleSubmit}>
         <input placeholder="Search"
           type="text" 
           name="searchString" 
@@ -50,13 +49,15 @@ return (
   {meals.map((meal)=>{
     return(
     <Link to={`/meals/${meal.id}`} key={meal.id}>
-    <div className="row">
-    <div className='column'>  
-    <img style={{width: '30%'}}src={meal.image} alt=''/>
-    
-    <h2 style={{textDecoration: 'none'}}>{meal.title}</h2>
-    
+    <div className="card">
+    <div className='card-image'>  
+    <img style={{width: '50%'}}src={meal.image} alt=''/></div>
+    <div > 
+    <div className='card-title'>
+    <h2 style={{width: '100%'}} >{meal.title}</h2>
     </div>
+    </div>
+   
     
     </div>
     </Link>
