@@ -1,5 +1,6 @@
 body {
  text-align: center;
+ background-color: rgb(105, 110, 242);
 }
 .container {
   display: grid;
@@ -9,21 +10,38 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   padding: 1rem;
+  position: relative;
 }
 
 .card {
-  border: 14px solid blue;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  transform-style: preserve-3d;
 }
+@keyframes zoominoutsinglefeatured {
+  0% {
+      transform: scale(1,1);
+  }
+  50% {
+      transform: scale(1.2,1.2);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
+
+.container img {
+animation: zoominoutsinglefeatured 1s infinite ;
+}
+
+
 
 a {
   text-decoration: none;
 }
 
 .card-title {
-  background-color: navy;
-  color: white;
+  color: black;
   border-radius: 0 0 1rem 1r;
   margin: 0;
   text-align: center;
