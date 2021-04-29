@@ -4,14 +4,14 @@ import '../Search.css'
 
 function Search() {
 const [meals, setMeals] = useState([])
-// const [lastSearch, setLastSearch] = useState('');
-
 const [searchString, setSearchString] = useState('')
+
 const handleChange =(e) => {
   setSearchString(e.target.value)
 }
 
 let key = process.env.REACT_APP_MEAL_KEY
+
 const handleSubmit = (e) => {
   e.preventDefault()
   getMeals()
@@ -26,8 +26,6 @@ const getMeals = () =>
     })
     .then(data => {
     setMeals(data)
-    console.log(data)
-    
     setSearchString('')
     })
     .catch(console.error)  
