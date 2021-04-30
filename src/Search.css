@@ -1,11 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
 body {
  text-align: center;
- background-color: rgb(105, 110, 242);
+ background-color: black;
+ background-image: url('https://images.unsplash.com/photo-1506368083636-6defb67639a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80');
 }
+
+.body {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* grid-auto-rows: minmax(250px, auto); */
   grid-gap: 1rem;
   margin: 0 auto;
   max-width: 1000px;
@@ -13,11 +26,13 @@ body {
   position: relative;
 }
 
+
 .card {
   display: grid;
   grid-template-rows: 1fr 1fr;
   transform-style: preserve-3d;
 }
+
 @keyframes zoominoutsinglefeatured {
   0% {
       transform: scale(1,1);
@@ -34,8 +49,6 @@ body {
 animation: zoominoutsinglefeatured 1s infinite ;
 }
 
-
-
 a {
   text-decoration: none;
 }
@@ -47,3 +60,15 @@ a {
   text-align: center;
 }
 
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.header input {
+  width: 50%;
+  padding: .5rem 0.4rem;
+  font-size: 1rem;
+}

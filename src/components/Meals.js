@@ -14,28 +14,36 @@ useEffect(()=> {
 }, [])
 
 if(meal){
-    return (
-        <div className='details-container'>  
-        {console.log(meal)}
-        <img style={{width: '40%'}} 
-        src={meal.image} 
-        alt='' 
-        />   
-        <div className='details'>
-        <h2>{meal.title}</h2> 
-        <p dangerouslySetInnerHTML={{__html:meal.summary}}></p>
-        <p dangerouslySetInnerHTML={{__html:meal.instructions}}></p>
-        {meal.extendedIngredients&&<ul>{meal.extendedIngredients.map(ingredient => {return <li key={ingredient.id}>{ingredient.name}</li>})}</ul>}
-        </div>
-        </div>
-    );
+return (
+    
+    <div className='details-container body'>  
+    <div className='header'>
+    <h1>{meal.title}</h1> 
+    <img style={{width: '40%'}} 
+                src={meal.image} 
+                alt={meal.title} 
+            />   
+    <h2>Summary:</h2>       
+    <p className='summary fade-in-text' dangerouslySetInnerHTML={{__html:meal.summary}}></p>
+    </div>
+
+    <h1>Instructions:</h1>
+    <ol className='instructions fade-in-text' dangerouslySetInnerHTML={{__html:meal.instructions}}></ol>
+
+    <div className='ingredients'>
+    <h1>Ingredients:</h1>
+    {meal.extendedIngredients&&
+    <ol className='ingredients fade-in-text'>{meal.extendedIngredients.map(ingredient => {return <li key={ingredient.id}>{ingredient.name}</li>})}</ol>}
+    </div>
+    </div>
+);
 } 
 else {
-    return (
-     <div className='error-message'>
-         <h2>Loading, please wait</h2>
-     </div>
-    )
+return (
+<div className='error-message'>
+    <h2>Loading, please wait</h2>
+</div>
+)
 }
 }
 
