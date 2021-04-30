@@ -1,4 +1,4 @@
-# RecipeSearcher
+# Recipe Finder
 
 ## Description 
 * Welcome to the Recipe Ccorner. Here we give you recipe's based on the food that you're looking for. 
