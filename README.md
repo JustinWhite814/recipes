@@ -1,10 +1,15 @@
 # Recipe Finder
 
 ## Description 
-* Welcome to the Recipe Ccorner. Here we give you recipe's based on the food that you're looking for. 
+* Welcome to the Recipe Corner. Here we give you recipe's based on the food that you're looking for. 
 * Upon discovering your desired food, you can click on each image and you'll be brought to a brief summary about the food as well as cooking instructions and ingredients needed to make the dish.
 * The styling is pretty basic with a few features that literally pop.
 
+## Api Used
+* https://spoonacular.com/food-api
+
+## Deploy 
+* https://morning-beach-67956.herokuapp.com/
 
 ## Users
 * Ability to lookup any ingredient and find the right food
@@ -39,9 +44,36 @@
 * Passing Data correctly.
 * Learning Guard Operators. 
 
+## Technologies Used
+* React.js
+* JavaScript/HTML/CSS
+* Heroku
+* Api
+* Fonts from Google Fonts
 
-## Technologies/Sites
+## MVP 
+* Link the API correctly and have it return values
+* Give a details page that references the specific food clicked
+* Create a search bar that let's you search by ingredients
+
+## Stretch Goals
+* Search for multiple things at once
+* Filter options based on dietary restrictions and food selections
+* 
+
+## Sites
 * https://w3schools.com/
 * https://google.com
 * https://stackoverflow.com
 * https://www.tutorialspoint.com/css/css_animation_fade_in.htm
+
+## Installation Instructions
+* First, for and clone the repo
+* Next, npm I to install required packages 
+* Then lastly, open up the files in your code editor 
+
+Git clone - the link -
+cd Recipe Finder
+npm i
+code .
+npm start
