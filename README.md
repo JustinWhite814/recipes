@@ -68,12 +68,14 @@
 * https://www.tutorialspoint.com/css/css_animation_fade_in.htm
 
 ## Installation Instructions
-* First, for and clone the repo
+* First, fork and clone the repo
 * Next, npm I to install required packages 
 * Then lastly, open up the files in your code editor 
 
-Git clone - the link -
+```
+Git clone
 cd Recipe Finder
 npm i
 code .
 npm start
+```
