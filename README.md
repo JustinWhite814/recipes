@@ -73,7 +73,7 @@
 * Then lastly, open up the files in your code editor 
 
 ```
-Git clone
+// Git clone 
 cd Recipe Finder
 npm i
 code .
