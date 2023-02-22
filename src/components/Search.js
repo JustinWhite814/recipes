@@ -6,18 +6,24 @@ import '../Search.css'
 function Search() {
 const [meals, setMeals] = useState([])
 const [searchString, setSearchString] = useState('')
+
+let key = process.env.REACT_APP_MEAL_KEY
+
+
 const handleChange =(e) => {
   setSearchString(e.target.value)
 }
-let key = process.env.REACT_APP_MEAL_KEY
+
+     
 const handleSubmit = (e) => {
   e.preventDefault()
   getMeals()
 }
 
+
 const getMeals = () => 
 {
-    const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchString}&number=40&apiKey=${key}`
+    const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${searchString}&number=20&apiKey=${key}`
     fetch(url)
     .then(res => {return res.json()})
     .then(data => {
@@ -26,6 +32,7 @@ const getMeals = () =>
     })
     .catch(console.error)  
 }
+
 
 return (
 <div className='body'>
@@ -42,6 +49,7 @@ return (
 </form>
 <h1>Find the Recipe of Your Dreams</h1>
 </div>
+
 
 <div className='container'>
   {meals.map((meal)=>{
