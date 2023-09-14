@@ -5,11 +5,11 @@
 * Upon discovering your desired food, you can click on each image and you'll be brought to a brief summary about the food as well as cooking instructions and ingredients needed to make the dish.
 * The styling is pretty basic with a few features that literally pop.
 
+[Live Link](https://js-recipe-finder.netlify.app/)
 ## Api Used
 * https://spoonacular.com/food-api
 
-## Deploy 
-* https://morning-beach-67956.herokuapp.com/
+
 
 ## Users
 * Ability to lookup any ingredient and find the right food
